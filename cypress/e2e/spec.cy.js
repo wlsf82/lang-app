@@ -69,4 +69,19 @@ describe('Lang App', () => {
       'Olá! Seu navegador está definido para Português.'
     ).should('be.visible')
   })
+
+  it("renders with a not listed language", () => {
+    cy.visit('./index.html', {
+      onBeforeLoad (win) {
+        Object.defineProperty(win.navigator, 'language', {
+          value: 'nb-NO'
+        })
+      }
+    })
+
+    cy.contains(
+      'h1',
+      "Hello! Your browser's language is not listed."
+    ).should('be.visible')
+  })
 })
