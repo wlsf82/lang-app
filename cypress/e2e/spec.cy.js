@@ -1,7 +1,7 @@
 // https://stackoverflow.com/questions/54671266/setting-the-browser-language-in-cypress
 
 describe('Lang App', () => {
-  it("renders with the default language (en-GB)", () => {
+  it('renders with the default language (en-GB)', () => {
     cy.visit('./index.html')
 
     cy.contains(
@@ -10,7 +10,7 @@ describe('Lang App', () => {
     ).should('be.visible')
   })
 
-  it("renders in en-US", () => {
+  it('renders in en-US', () => {
     cy.visit('./index.html', {
       onBeforeLoad (win) {
         Object.defineProperty(win.navigator, 'language', {
@@ -25,7 +25,7 @@ describe('Lang App', () => {
     ).should('be.visible')
   })
 
-  it("renders in es-ES", () => {
+  it('renders in es-ES', () => {
     cy.visit('./index.html', {
       onBeforeLoad (win) {
         Object.defineProperty(win.navigator, 'language', {
@@ -40,7 +40,7 @@ describe('Lang App', () => {
     ).should('be.visible')
   })
 
-  it("renders in fr-FR", () => {
+  it('renders in fr-FR', () => {
     cy.visit('./index.html', {
       onBeforeLoad (win) {
         Object.defineProperty(win.navigator, 'language', {
@@ -55,7 +55,7 @@ describe('Lang App', () => {
     ).should('be.visible')
   })
 
-  it("renders in pt-BR", () => {
+  it('renders in pt-BR', () => {
     cy.visit('./index.html', {
       onBeforeLoad (win) {
         Object.defineProperty(win.navigator, 'language', {
@@ -70,7 +70,7 @@ describe('Lang App', () => {
     ).should('be.visible')
   })
 
-  it("renders with a not listed language (nb-NO)", () => {
+  it('renders with a not listed language (nb-NO)', () => {
     cy.visit('./index.html', {
       onBeforeLoad (win) {
         Object.defineProperty(win.navigator, 'language', {
