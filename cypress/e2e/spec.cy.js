@@ -9,6 +9,11 @@ describe('Lang App', () => {
         })
       }
     })
+
+    cy.contains(
+      'h1',
+      'Hello! Your browser is set to English.'
+    ).should('be.visible')
   })
 
   it("renders in es-es", () => {
@@ -19,6 +24,11 @@ describe('Lang App', () => {
         })
       }
     })
+
+    cy.contains(
+      'h1',
+      '¡Hola! Tu navegador está configurado en Español.'
+    ).should('be.visible')
   })
 
   it("renders in fr-fr", () => {
@@ -29,6 +39,11 @@ describe('Lang App', () => {
         })
       }
     })
+
+    cy.contains(
+      'h1',
+      'Bonjour! Votre navigateur est défini sur Français.'
+    ).should('be.visible')
   })
 
   it("renders in pt-br", () => {
@@ -39,5 +54,10 @@ describe('Lang App', () => {
         })
       }
     })
+
+    cy.contains(
+      'h1',
+      'Olá! Seu navegador está definido para Português.'
+    ).should('be.visible')
   })
 })
