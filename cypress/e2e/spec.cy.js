@@ -1,7 +1,7 @@
 // https://stackoverflow.com/questions/54671266/setting-the-browser-language-in-cypress
 
 describe('Lang App', () => {
-  it("renders with the default language (en-*)", () => {
+  it("renders with the default language (en-GB)", () => {
     cy.visit('./index.html')
 
     cy.contains(
