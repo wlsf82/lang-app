@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Detector</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="message"></h1>
+    <script>
+      // Define translations
+      const translations = {
+        "en": "Hello! Your browser is set to English.",
+        "es": "¡Hola! Tu navegador está configurado en Español.",
+        "fr": "Bonjour! Votre navigateur est défini sur Français.",
+        "pt": "Olá! Seu navegador está definido para Português."
+      };
+
+      // Detect browser language
+      const userLang = navigator.language || navigator.languages[0];
+      const langCode = userLang.split('-')[0]; // Get base language code (e.g., 'en' from 'en-US')
+
+      // Set message
+      document.getElementById("message").textContent = translations[langCode] || "Hello! Your browser's language is not listed.";
+    </script>
+  </body>
+</html>
