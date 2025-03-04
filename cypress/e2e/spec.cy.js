@@ -1,11 +1,11 @@
 // https://stackoverflow.com/questions/54671266/setting-the-browser-language-in-cypress
 
 describe('Lang App', () => {
-  it("renders in en-en", () => {
+  it("renders in en-US", () => {
     cy.visit('./index.html', {
       onBeforeLoad (win) {
         Object.defineProperty(win.navigator, 'language', {
-          value: 'en-en'
+          value: 'en-US'
         })
       }
     })
@@ -16,11 +16,11 @@ describe('Lang App', () => {
     ).should('be.visible')
   })
 
-  it("renders in es-es", () => {
+  it("renders in es-ES", () => {
     cy.visit('./index.html', {
       onBeforeLoad (win) {
         Object.defineProperty(win.navigator, 'language', {
-          value: 'es-es'
+          value: 'es-ES'
         })
       }
     })
@@ -31,11 +31,11 @@ describe('Lang App', () => {
     ).should('be.visible')
   })
 
-  it("renders in fr-fr", () => {
+  it("renders in fr-FR", () => {
     cy.visit('./index.html', {
       onBeforeLoad (win) {
         Object.defineProperty(win.navigator, 'language', {
-          value: 'fr-fr'
+          value: 'fr-FR'
         })
       }
     })
@@ -46,11 +46,11 @@ describe('Lang App', () => {
     ).should('be.visible')
   })
 
-  it("renders in pt-br", () => {
+  it("renders in pt-BR", () => {
     cy.visit('./index.html', {
       onBeforeLoad (win) {
         Object.defineProperty(win.navigator, 'language', {
-          value: 'pt-br'
+          value: 'pt-BR'
         })
       }
     })
