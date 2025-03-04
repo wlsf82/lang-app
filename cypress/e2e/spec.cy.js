@@ -70,7 +70,7 @@ describe('Lang App', () => {
     ).should('be.visible')
   })
 
-  it("renders with a not listed language", () => {
+  it("renders with a not listed language (nb-NO)", () => {
     cy.visit('./index.html', {
       onBeforeLoad (win) {
         Object.defineProperty(win.navigator, 'language', {
